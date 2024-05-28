@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add7(number){
+            return number + 7
+        }
+        function capitalize(string){
+            if (typeof string !== 'string' || string.length === 0) {
+                return 
+            }
+            return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+        }
+        function lastletter(string){
+            return string.charAt(string.length - 1)
+        }
+        console.log(add7(23))
+        console.log(capitalize("nigger"))
+        console.log(lastletter("nigger"))
+    </script>
+</body>
+</html>

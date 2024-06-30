@@ -4,3 +4,6 @@
 [submodule "Landing_Page"]
 	path = Landing_Page
 	url = git@github.com:ChamsFares/Landing_Page.git
+[submodule "Foundations/calculator"]
+	path = Foundations/calculator
+	url = git@github.com:ChamsFares/calculator.git

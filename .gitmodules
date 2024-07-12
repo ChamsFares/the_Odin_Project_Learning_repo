@@ -7,3 +7,6 @@
 [submodule "Foundations/calculator"]
 	path = Foundations/calculator
 	url = git@github.com:ChamsFares/calculator.git
+[submodule "Intermediate/Sign_up_Form"]
+	path = Intermediate/Sign_up_Form
+	url = git@github.com:ChamsFares/Sign_up_Form.git

@@ -10,3 +10,6 @@
 [submodule "Intermediate/Sign_up_Form"]
 	path = Intermediate/Sign_up_Form
 	url = git@github.com:ChamsFares/Sign_up_Form.git
+[submodule "Intermediate/Admin_Dashboard"]
+	path = Intermediate/Admin_Dashboard
+	url = git@github.com:ChamsFares/Admin_Dashboard.git

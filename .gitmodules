@@ -16,3 +16,6 @@
 [submodule "Intermediate/js/Library"]
 	path = Intermediate/js/Library
 	url = git@github.com:ChamsFares/Library.git
+[submodule "Intermediate/js/Tic_Tac_Toe"]
+	path = Intermediate/js/Tic_Tac_Toe
+	url = git@github.com:ChamsFares/Tic_Tac_Toe.git

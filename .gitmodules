@@ -13,3 +13,6 @@
 [submodule "Intermediate/Admin_Dashboard"]
 	path = Intermediate/Admin_Dashboard
 	url = git@github.com:ChamsFares/Admin_Dashboard.git
+[submodule "Intermediate/js/Library"]
+	path = Intermediate/js/Library
+	url = git@github.com:ChamsFares/Library.git

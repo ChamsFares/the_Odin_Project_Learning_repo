@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const book = {}
+        function books (title, author, pages, read){
+            this.title = title;
+            this.author = author;
+            this.pages = pages;
+            this.read = read;
+            this.info = function(){
+                return `${this.title} by ${this.author}, ${this.pages}, ${this.read}`;
+            }
+        }
+        const hobbite = new books("The Hobbit", "J.R.R. Tolkien", "295 pages", "not read yet")
+        console.log(hobbite.info())
+    </script>
+</body>
+</html>

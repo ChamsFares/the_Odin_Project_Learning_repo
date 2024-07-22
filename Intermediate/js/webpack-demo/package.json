@@ -4,14 +4,22 @@
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "watch": "webpack --watch",
+    "start": "webpack server --open --config webpack.dev.js",
+    "server": "node server.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "webpack-cli": "^5.1.4"
+    "express": "^4.19.2",
+    "html-webpack-plugin": "^5.6.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-middleware": "^7.3.0",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^6.0.1"
   },
   "dependencies": {
     "lodash": "^4.17.21"

@@ -22,3 +22,6 @@
 [submodule "Intermediate/js/Restaurant_Page"]
 	path = Intermediate/js/Restaurant_Page
 	url = git@github.com:ChamsFares/Restaurant_Page.git
+[submodule "Intermediate/js/ToDo_List"]
+	path = Intermediate/js/ToDo_List
+	url = git@github.com:ChamsFares/ToDo_List.git

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        #controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <input type="text" id="search-input" placeholder="Search for GIFs">
+        <button id="search-button">Search</button>
+        <button id="new-image-button">New Image</button>
+    </div>
+    <img src="" alt="Random GIF" id="gif-image">
+    <div id="error-message"></div>
+    <script>
+        const API_KEY = '';
+        const img = document.getElementById('gif-image');
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-button');
+        const newImageBtn = document.getElementById('new-image-button');
+        const errorMessage = document.getElementById('error-message');
+
+        function fetchGif(searchInput = 'cats') {
+                const url = `https://api.giphy.com/v1/gifs/translate?api_key=${API_KEY}&s=${searchInput}`;
+
+                fetch(url, { mode: "cors" })
+                    .then(response => response.json())
+                    .then(response => {
+                        if (response.data.length === 0 || !response.data.images) {
+                            throw new Error('No GIFs found');
+                        }
+                        img.src = response.data.images.original.url;
+                        errorMessage.textContent = '';
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        img.src = 'https://via.placeholder.com/300x200?text=No+Image+Found';
+                        errorMessage.textContent = `Error: ${error.message}`;
+                    });
+            }
+
+            searchBtn.addEventListener('click', () => {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    fetchGif(searchTerm);
+                }
+            });
+
+            newImageBtn.addEventListener('click', () => {
+                fetchGif();
+            });
+
+            fetchGif();
+    </script>
+</body>
+</html>

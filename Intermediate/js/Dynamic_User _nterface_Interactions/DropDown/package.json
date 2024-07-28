@@ -1,0 +1,12 @@
+{
+  "name": "reusable-dropdown",
+  "version": "1.0.0",
+  "description": "A reusable dropdown menu component",
+  "main": "dropdown.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["dropdown", "menu", "javascript"],
+  "author": "Your Name",
+  "license": "MIT"
+}

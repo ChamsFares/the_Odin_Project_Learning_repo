@@ -1,0 +1,12 @@
+{
+  "name": "simple-image-carousel",
+  "version": "1.0.0",
+  "description": "A simple, customizable image carousel for web applications",
+  "main": "carousel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["carousel", "slider", "image", "gallery"],
+  "author": "Your Name",
+  "license": "MIT"
+}

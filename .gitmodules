@@ -25,3 +25,6 @@
 [submodule "Intermediate/js/ToDo_List"]
 	path = Intermediate/js/ToDo_List
 	url = git@github.com:ChamsFares/ToDo_List.git
+[submodule "Intermediate/js/Weather_App"]
+	path = Intermediate/js/Weather_App
+	url = git@github.com:ChamsFares/Weather_App.git

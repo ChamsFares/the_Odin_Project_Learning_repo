@@ -28,3 +28,9 @@
 [submodule "Intermediate/js/Weather_App"]
 	path = Intermediate/js/Weather_App
 	url = git@github.com:ChamsFares/Weather_App.git
+[submodule "Intermediate/Git_History_Odin"]
+	path = Intermediate/Git_History_Odin
+	url = git@github.com:ChamsFares/Git_History_Odin.git
+[submodule "Intermediate/js/Testing_practice"]
+	path = Intermediate/js/Testing_practice
+	url = git@github.com:ChamsFares/Testing_practice.git

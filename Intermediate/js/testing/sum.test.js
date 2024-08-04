@@ -28,8 +28,43 @@ test('two plus two', () => {
   expect(value).toBeGreaterThanOrEqual(3.5);
   expect(value).toBeLessThan(5);
   expect(value).toBeLessThanOrEqual(4.5);
-
-  // toBe and toEqual are equivalent for numbers
   expect(value).toBe(4);
   expect(value).toEqual(4);
+});
+
+test('adding floating point numbers', () => {
+  const value = 0.1 + 0.2;
+  expect(value).toBeCloseTo(0.3); 
+});
+
+test('there is no I in team', () => {
+  expect('team').not.toMatch(/I/);
+});
+
+test('but there is a "stop" in Christoph', () => {
+  expect('Christoph').toMatch(/stop/);
+});
+
+test('there is no I in team', () => {
+  expect('team').not.toMatch(/I/);
+});
+
+test('but there is a "stop" in Christoph', () => {
+  expect('Christoph').toMatch(/stop/);
+});
+
+
+function compileAndroidCode() {
+  throw new Error('you are using the wrong JDK!');
+}
+
+test('compiling android goes as expected', () => {
+  expect(() => compileAndroidCode()).toThrow();
+  expect(() => compileAndroidCode()).toThrow(Error);
+
+  expect(() => compileAndroidCode()).toThrow('you are using the wrong JDK');
+  expect(() => compileAndroidCode()).toThrow(/JDK/);
+
+  expect(() => compileAndroidCode()).toThrow(/^you are using the wrong JDK$/);
+  expect(() => compileAndroidCode()).toThrow(/^you are using the wrong JDK!$/);
 });

@@ -34,3 +34,6 @@
 [submodule "Intermediate/js/Testing_practice"]
 	path = Intermediate/js/Testing_practice
 	url = git@github.com:ChamsFares/Testing_practice.git
+[submodule "Intermediate/js/Battleship_game"]
+	path = Intermediate/js/Battleship_game
+	url = git@github.com:ChamsFares/Battleship_game.git

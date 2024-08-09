@@ -37,3 +37,6 @@
 [submodule "Intermediate/js/Battleship_game"]
 	path = Intermediate/js/Battleship_game
 	url = git@github.com:ChamsFares/Battleship_game.git
+[submodule "Advanced/Home_Page"]
+	path = Advanced/Home_Page
+	url = git@github.com:ChamsFares/Home_Page.git

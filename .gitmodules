@@ -43,3 +43,6 @@
 [submodule "React/CV_Application"]
 	path = React/CV_Application
 	url = git@github.com:ChamsFares/CV_Application.git
+[submodule "React/Memory_Card"]
+	path = React/Memory_Card
+	url = git@github.com:ChamsFares/Memory_Card.git

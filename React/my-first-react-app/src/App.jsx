@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import ClassInput from "./classComponent";
 
 function Person() {
   const [person, setPerson] = useState({
@@ -66,6 +67,7 @@ function App() {
     <div>
       <Person></Person>
       <Clock></Clock>
+      <ClassInput></ClassInput>
     </div>
   );
 }

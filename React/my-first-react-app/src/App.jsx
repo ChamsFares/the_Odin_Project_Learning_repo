@@ -1,11 +1,11 @@
-import './App.css'
-import { useState } from 'react';
+import "./App.css";
+import { useEffect, useState } from "react";
 
 function Person() {
   const [person, setPerson] = useState({
     firstName: "John",
     lastName: "Doe",
-    age: 100
+    age: 100,
   });
 
   const handleFirstNameChange = (e) => {
@@ -26,7 +26,9 @@ function Person() {
 
   return (
     <>
-      <h1>{person.firstName} {person.lastName}</h1>
+      <h1>
+        {person.firstName} {person.lastName}
+      </h1>
       <h2>{person.age}</h2>
       <input
         type="text"
@@ -45,15 +47,27 @@ function Person() {
   );
 }
 
+function Clock() {
+  const [counter, setCounter] = useState(0);
 
+  useEffect(() => {
+    const key = setInterval(() => {
+      setCounter((count) => count + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(key);
+    };
+  }, []);
+  return <p>{counter} seconds have passed.</p>;
+}
 function App() {
-
   return (
     <div>
       <Person></Person>
+      <Clock></Clock>
     </div>
   );
 }
 
-
-export default App
+export default App;

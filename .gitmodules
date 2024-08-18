@@ -46,3 +46,6 @@
 [submodule "React/Memory_Card"]
 	path = React/Memory_Card
 	url = git@github.com:ChamsFares/Memory_Card.git
+[submodule "React/Shopping_Store"]
+	path = React/Shopping_Store
+	url = git@github.com:ChamsFares/Shopping_Store.git

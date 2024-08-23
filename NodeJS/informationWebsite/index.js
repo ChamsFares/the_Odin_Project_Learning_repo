@@ -1,43 +1,21 @@
-const http = require("http");
-const fs = require("fs");
+const express = require("express");
+const app = express();
 const path = require("path");
 
-const server = http.createServer((req, res) => {
-  let filePath = path.join(
-    __dirname,
-    req.url === "/" ? "index.html" : req.url + ".html"
-  );
-  const extname = String(path.extname(filePath)).toLowerCase();
-
-  const validExtensions = [".html"];
-  const isValidExt = validExtensions.includes(extname);
-
-  fs.readFile(
-    isValidExt ? filePath : path.join(__dirname, "404.html"),
-    (err, content) => {
-      if (err) {
-        res.writeHead(500);
-        res.end("Server Error");
-        return;
-      }
-
-      if (
-        isValidExt ||
-        req.url === "/" ||
-        req.url === "/about" ||
-        req.url === "/contact-me"
-      ) {
-        res.writeHead(200, { "Content-Type": "text/html" });
-        res.end(content, "utf-8");
-      } else {
-        res.writeHead(404, { "Content-Type": "text/html" });
-        res.end(content, "utf-8");
-      }
-    }
-  );
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+app.get("/about", (req, res) => {
+  res.sendFile(path.join(__dirname, "about.html"));
+});
+app.get("/contact-me", (req, res) => {
+  res.sendFile(path.join(__dirname, "contact-me.html"));
+});
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "404.html"));
 });
 
 const PORT = 8080;
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

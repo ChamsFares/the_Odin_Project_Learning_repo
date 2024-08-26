@@ -1,15 +1,24 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const { title } = require("process");
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.render("about", {
+    title: "Home Page",
+    description: "Welcome to the Home Page",
+  });
 });
 app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "about.html"));
+  res.render("about", {
+    title: "About Us",
+    description: "This is the About page",
+  });
 });
 app.get("/contact-me", (req, res) => {
-  res.sendFile(path.join(__dirname, "contact-me.html"));
+  res.render("contact-me", { title: "Contact Me" });
 });
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "404.html"));

@@ -1,0 +1,3 @@
+[submodule "NodeJS/Mini_Message_Board"]
+	path = NodeJS/Mini_Message_Board
+	url = git@github.com:ChamsFares/Mini_Message_Board.git

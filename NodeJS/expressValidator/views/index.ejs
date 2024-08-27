@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h2>Search Users</h2>
+    <form action="/search" method="GET">
+      <label for="searchName">Name:</label>
+      <input type="text" id="searchName" name="name" />
+
+      <label for="searchEmail">Email:</label>
+      <input type="email" id="searchEmail" name="email" />
+
+      <button type="submit">Search</button>
+    </form>
+    <ul>
+      <% users.forEach(user => { %>
+      <li>
+        <%= user.firstName %> <%= user.lastName %> (<%= user.email %>, Age: <%=
+        user.age || 'N/A' %>)
+        <p><%= user.bio || 'No bio available' %></p>
+        <a href="/users/<%= user.id %>/update">Update</a>
+        <form method="POST" action="/users/<%= user.id %>/delete">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+      <% }); %>
+    </ul>
+    <a href="/create">Create a user</a>
+  </body>
+</html>

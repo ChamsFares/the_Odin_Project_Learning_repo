@@ -15,7 +15,7 @@ VALUES
 async function main() {
   console.log("seeding...");
   const client = new Client({
-    connectionString: "postrage://chams:fares@localhost:5432/top_users",
+    connectionString: `postgersql://${process.env.ROLE_NAME}:${process.env.ROLE_PASSWORD}@localhost:${process.env.LOCAL_HOST}/${process.env.DATA_BASE}`,
   });
 
   await client.connect();

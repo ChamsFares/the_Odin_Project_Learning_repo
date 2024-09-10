@@ -4,3 +4,6 @@
 [submodule "NodeJS/Inventory_Application"]
 	path = NodeJS/Inventory_Application
 	url = git@github.com:ChamsFares/Inventory_Application.git
+[submodule "NodeJS/Members_Only"]
+	path = NodeJS/Members_Only
+	url = git@github.com:ChamsFares/Members_Only.git
